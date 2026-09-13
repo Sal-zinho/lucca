@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucca Restaurante | Galeteria Italiana & Festival de Risotto • Brasília DF</title>
+
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Experimente o melhor da alta gastronomia italiana no Complexo Brasil 21 em Brasília. Rodízio autêntico de galetos, steaks nobres, tilápia e Festival de Risotto. Ambiente premium e romântico. Avaliação 4.8 estrelas.">
+  <meta name="keywords" content="Lucca Restaurante, Galeteria Brasilia, Brasil 21 Gastronomia, Festival de Risotto Brasilia, Rodizio de Galeto Brasilia, Restaurante Romantico Brasilia, SHS Quadra 6, Restaurante Italiano Brasil 21">
+  <meta name="author" content="Lucca Restaurante">
+  <meta name="theme-color" content="#0B0A09">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23141210' stroke='%23D4AF37' stroke-width='4'/><text x='50%' y='62%' text-anchor='middle' font-family='serif' font-size='48' font-weight='bold' fill='%23D4AF37'>L</text></svg>">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:title" content="Lucca Restaurante | Galeteria Italiana & Festival de Risotto">
+  <meta property="og:description" content="Tradição italiana e sabor inesquecível no Complexo Brasil 21, Brasília. Rodízio de galetos, steaks, tilápia e Festival de Risottos. Reserve sua mesa!">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:url" content="https://luccarestaurante.com.br">
+
+  <!-- Schema.org JSON-LD para Restaurante -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Lucca Restaurante & Galeteria",
+    "image": "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=1200&q=85",
+    "@id": "https://luccarestaurante.com.br",
+    "url": "https://luccarestaurante.com.br",
+    "telephone": "+55-61-3218-4746",
+    "priceRange": "$$",
+    "servesCuisine": ["Italian", "Galeteria", "Steakhouse", "Risotto"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "SHS Quadra 6, Bloco F, 1º andar - Complexo Brasil 21 Suítes",
+      "addressLocality": "Brasília",
+      "addressRegion": "DF",
+      "postalCode": "70316-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -15.7950,
+      "longitude": -47.8930
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1280"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "12:00",
+        "closes": "15:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "12:00",
+        "closes": "16:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "19:00",
+        "closes": "23:30"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Play CDN (Utilidades Rápidas) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#F3E5AB',
+              400: '#E5C378',
+              500: '#D4AF37',
+              600: '#C5A059',
+              700: '#AA820A'
+            },
+            wine: {
+              700: '#9B2D46',
+              800: '#6B1D2F',
+              900: '#3F0E1A'
+            },
+            nero: {
+              900: '#0B0A09',
+              800: '#141210',
+              700: '#1D1A16'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            display: ['Italiana', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS Design System -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-[#0B0A09] text-[#FAF7F0] antialiased selection:bg-[#D4AF37] selection:text-black">
+
+  <!-- =========================================================================
+       HEADER / NAVBAR FIXO & GLASSMORPHISM
+       ========================================================================= -->
+  <header id="main-header" class="fixed top-0 left-0 w-full z-40 py-5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group text-decoration-none">
+        <div class="w-10 h-10 rounded-full border border-[#D4AF37] flex items-center justify-center bg-[#161311] group-hover:scale-105 transition-transform duration-300 shadow-gold">
+          <span class="font-display text-xl text-[#D4AF37] font-bold">L</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display text-2xl tracking-widest text-white group-hover:text-[#D4AF37] transition-colors leading-none">LUCCA</span>
+          <span class="text-[9px] tracking-[0.25em] text-[#C5A059] uppercase font-semibold mt-0.5">Ristorante & Galeteria</span>
+        </div>
+      </a>
+
+      <!-- Status em Tempo Real (Desktop XL) -->
+      <div class="hidden xl:flex items-center">
+        <div class="restaurant-live-status status-pill">
+          <span class="status-dot open"></span>
+          <span class="text-white font-medium">Verificando status...</span>
+        </div>
+      </div>
+
+      <!-- Links de Navegação Principal -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs xl:text-sm font-medium tracking-wide">
+        <a href="#sobre" class="text-gray-300 hover:text-[#D4AF37] transition-colors">Sobre Nós</a>
+        <a href="#experiencia" class="text-gray-300 hover:text-[#D4AF37] transition-colors">O Rodízio</a>
+        <a href="#festival-risotto" class="text-gray-300 hover:text-[#D4AF37] transition-colors">Festival de Risotto</a>
+        <a href="#cardapio" class="text-gray-300 hover:text-[#D4AF37] transition-colors">Cardápio</a>
+        <a href="#avaliacoes" class="text-gray-300 hover:text-[#D4AF37] transition-colors flex items-center gap-1">
+          <span>Avaliações</span>
+          <span class="text-[#D4AF37] text-xs font-bold bg-[#D4AF37]/10 px-1.5 py-0.5 rounded">4.8★</span>
+        </a>
+        <a href="#galeria" class="text-gray-300 hover:text-[#D4AF37] transition-colors">Instagram</a>
+        <a href="#contato" class="text-gray-300 hover:text-[#D4AF37] transition-colors">Contato</a>
+      </nav>
+
+      <!-- Botão CTA de Reserva -->
+      <div class="flex items-center gap-3">
+        <button class="open-reservation-btn btn-gold text-xs sm:text-sm py-2.5 px-4 sm:px-6 hidden sm:inline-flex">
+          <span>Reservar Mesa</span>
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+        </button>
+
+        <!-- Mobile & Tablet Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:border-[#D4AF37]/40 transition-colors" aria-label="Abrir Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="hidden lg:hidden bg-[#141210]/95 backdrop-blur-2xl border-b border-[#D4AF37]/20 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4">
+        <div class="restaurant-live-status status-pill self-start mb-2">
+          <span class="status-dot open"></span>
+          <span class="text-white text-xs">Aberto Hoje</span>
+        </div>
+        <a href="#sobre" class="mobile-nav-link text-lg font-serif text-white hover:text-[#D4AF37] py-1 border-b border-white/5">Sobre Nós</a>
+        <a href="#experiencia" class="mobile-nav-link text-lg font-serif text-white hover:text-[#D4AF37] py-1 border-b border-white/5">O Rodízio Tradicional</a>
+        <a href="#festival-risotto" class="mobile-nav-link text-lg font-serif text-white hover:text-[#D4AF37] py-1 border-b border-white/5">Festival de Risotto</a>
+        <a href="#cardapio" class="mobile-nav-link text-lg font-serif text-white hover:text-[#D4AF37] py-1 border-b border-white/5">Cardápio Completo</a>
+        <a href="#avaliacoes" class="mobile-nav-link text-lg font-serif text-white hover:text-[#D4AF37] py-1 border-b border-white/5 flex items-center justify-between">
+          <span>Avaliações dos Clientes</span>
+          <span class="text-[#D4AF37] text-xs font-bold bg-[#D4AF37]/20 px-2 py-0.5 rounded">4.8★</span>
+        </a>
+        <a href="#galeria" class="mobile-nav-link text-lg font-serif text-white hover:text-[#D4AF37] py-1 border-b border-white/5">Fotos do Instagram</a>
+        <a href="#contato" class="mobile-nav-link text-lg font-serif text-white hover:text-[#D4AF37] py-1">Localização & Contato</a>
+
+        <div class="pt-4 flex flex-col gap-3">
+          <button class="open-reservation-btn btn-gold w-full text-center">
+            <span>Solicitar Reserva no WhatsApp</span>
+          </button>
+          <a href="tel:6132184746" class="btn-outline-gold w-full text-center">
+            <span>Ligar: (61) 3218-4746</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION - CINEMATOGRÁFICA COM PARALLAX E CTAS DE ALTA CONVERSÃO
+       ========================================================================= -->
+  <section id="hero" class="relative min-h-[92vh] lg:min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+
+    <!-- Background Imagem com Parallax & Overlay Gradiente -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85"
+        alt="Ambiente sofisticado do Lucca Restaurante no Complexo Brasil 21"
+        class="hero-bg-img hero-bg-zoom w-full h-full object-cover opacity-35"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0B0A09] via-[#0B0A09]/70 to-black/60"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#0B0A09]/40 to-[#0B0A09]"></div>
+    </div>
+
+    <!-- Conteúdo Hero -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+
+      <!-- Eyebrow Badge -->
+      <div class="hero-badge inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1A1613]/95 border border-[#D4AF37]/50 backdrop-blur-md mb-3 shadow-md">
+        <span class="text-[#D4AF37] text-xs">📍</span>
+        <span class="text-xs font-semibold tracking-wider uppercase text-[#E5C378]">Complexo Brasil 21 Suítes • Brasília - DF</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span>
+        <span class="text-xs text-emerald-400 font-bold hidden sm:inline">4.8 ★ Google</span>
+      </div>
+
+      <!-- Título Principal com Tipografia Nobre -->
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] max-w-4xl mb-3">
+        <span class="hero-title-line block">A Nobre Tradição da</span>
+        <span class="hero-title-line block font-display text-gold-gradient font-normal italic my-0.5">Galeteria Italiana</span>
+        <span class="hero-title-line block text-lg sm:text-2xl md:text-3xl font-light tracking-normal text-gray-200">& Festival de Risotto</span>
+      </h1>
+
+      <!-- Subtítulo Envolvente -->
+      <p class="hero-subtitle text-xs sm:text-sm md:text-base text-[#EAE3D2] max-w-2xl font-light leading-relaxed mb-5">
+        Galeto al Primo Canto marinado por 24 horas, cortes nobres de steaks, tilápia grelhada e risottos autorais servidos em uma atmosfera intimista, romântica e acolhedora no coração de Brasília.
+      </p>
+
+      <!-- Grupo de Ações Principais (CTAs) -->
+      <div class="hero-cta-group flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto mb-6">
+        <button class="open-reservation-btn btn-gold btn-magnetic w-full sm:w-auto text-xs sm:text-sm py-3 px-6 flex items-center justify-center gap-2 shadow-lg shadow-[#D4AF37]/15">
+          <span>Reservar Mesa no WhatsApp</span>
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+        </button>
+
+        <a href="#cardapio" class="btn-outline-gold w-full sm:w-auto text-xs sm:text-sm py-3 px-6 flex items-center justify-center gap-2">
+          <span>Conhecer o Cardápio</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </a>
+      </div>
+
+      <!-- Barra de Destaques Rápidos -->
+      <div id="stats-trigger" class="w-full grid grid-cols-2 md:grid-cols-4 gap-2.5 max-w-4xl border-t border-white/10 pt-4 text-left">
+
+        <div class="hero-stats-card p-2.5 sm:p-3 rounded-lg bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+          <div class="flex items-center gap-1 text-[#D4AF37] font-serif text-lg sm:text-xl font-bold">
+            <span class="stat-counter" data-target="4.8" data-decimals="1">4.8</span>
+            <span class="text-[10px] font-sans text-yellow-400">★★★★★</span>
+          </div>
+          <p class="text-[10px] sm:text-[11px] text-gray-400 mt-0.5">Google & TripAdvisor (+1.280)</p>
+        </div>
+
+        <div class="hero-stats-card p-2.5 sm:p-3 rounded-lg bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+          <div class="text-[#D4AF37] font-serif text-lg sm:text-xl font-bold">
+            <span class="stat-counter" data-target="24" data-suffix="h">24h</span>
+          </div>
+          <p class="text-[10px] sm:text-[11px] text-gray-400 mt-0.5">Marinada com ervas e vinho</p>
+        </div>
+
+        <div class="hero-stats-card p-2.5 sm:p-3 rounded-lg bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+          <div class="text-[#D4AF37] font-serif text-lg sm:text-xl font-bold">
+            <span class="stat-counter" data-target="120" data-suffix="+">120+</span>
+          </div>
+          <p class="text-[10px] sm:text-[11px] text-gray-400 mt-0.5">Rótulos na Adega Climatizada</p>
+        </div>
+
+        <div class="hero-stats-card p-2.5 sm:p-3 rounded-lg bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+          <div class="text-[#D4AF37] font-serif text-lg sm:text-xl font-bold">
+            <span>Brasil 21</span>
+          </div>
+          <p class="text-[10px] sm:text-[11px] text-gray-400 mt-0.5">SHS Qd 6 • Com Valet & Garagem</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a href="#sobre" class="hidden lg:flex absolute bottom-2 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-[#D4AF37] transition-colors flex-col items-center gap-1 z-10" aria-label="Rolar para baixo">
+      <span class="text-[9px] tracking-widest uppercase font-semibold text-gray-400">Descubra</span>
+      <div class="w-4 h-6 rounded-full border border-gray-600 flex items-start justify-center p-1">
+        <div class="w-1 h-1.5 bg-[#D4AF37] rounded-full animate-bounce"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 1: SOBRE NÓS - TRADIÇÃO ITALIANA NO COMPLEXO BRASIL 21
+       ========================================================================= -->
+  <section id="sobre" class="py-24 bg-[#141210] relative overflow-hidden border-t border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+        <!-- Galeria de Imagens de Destaque -->
+        <div class="lg:col-span-6 tradition-image-box relative">
+          <div class="relative z-10 rounded-2xl overflow-hidden border border-[#D4AF37]/30 shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=1200&q=85"
+              alt="Galeto dourado assado na brasa do Lucca Restaurante"
+              class="w-full h-[420px] sm:h-[500px] object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/75 backdrop-blur-md border border-[#D4AF37]/30">
+              <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Segredo da Serra Gaúcha</span>
+              <p class="text-sm text-gray-200 mt-1 font-serif italic">"A harmonia perfeita entre o fogo da brasa, o vinho branco e a sálvia fresca colhida à mão."</p>
+            </div>
+          </div>
+
+          <!-- Card Flutuante de Avaliação -->
+          <div class="absolute -bottom-6 -right-4 sm:-right-6 z-20 p-5 rounded-2xl bg-[#1D1A16] border border-[#D4AF37]/50 shadow-gold max-w-[260px] hidden sm:block">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-yellow-400 text-lg">★★★★★</span>
+              <span class="font-bold text-[#D4AF37] text-sm">4.8 / 5.0</span>
+            </div>
+            <p class="text-xs text-gray-300 font-medium">Eleito uma das experiências gastronômicas mais bem avaliadas de Brasília.</p>
+          </div>
+        </div>
+
+        <!-- Conteúdo Textual -->
+        <div class="lg:col-span-6 tradition-content-box space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold uppercase tracking-wider">
+            <span>Tradição & Excelência</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+            A autêntica alma italiana no coração do <span class="font-display text-gold-gradient italic font-normal">Plano Piloto</span>.
+          </h2>
+
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-light">
+            Localizado no 1º andar do <strong class="text-white font-semibold">Complexo Brasil 21 Suítes</strong>, o <strong class="text-[#D4AF37] font-semibold">Lucca Restaurante</strong> nasceu da paixão pelas tradicionais galeterias da Serra Gaúcha e pelos aromas inconfundíveis das cantinas do norte da Itália.
+          </p>
+
+          <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+            Aqui, cada detalhe é preparado com reverência: nosso consagrado <span class="text-gray-200 font-medium">Galeto al Primo Canto</span> descansa por 24 horas em uma marinada aromática com vinho branco e sálvia fresca, antes de ir para a brasa viva. Acompanhado de polentas milanesas crocantes, sopas de capeletti fumegantes, massas frescas e uma seleção refinada de risottos e cortes nobres de steaks e tilápia.
+          </p>
+
+          <!-- Diferenciais em Ícones -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="text-2xl">🕯️</span>
+              <div>
+                <h4 class="text-white font-semibold text-sm">Ambiente Romântico</h4>
+                <p class="text-xs text-gray-400 mt-0.5">Iluminação intimista e privacidade para casais e comemorações a dois.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="text-2xl">💼</span>
+              <div>
+                <h4 class="text-white font-semibold text-sm">Almoço Executivo</h4>
+                <p class="text-xs text-gray-400 mt-0.5">Serviço ágil, Wi-Fi de alta velocidade e mesas no complexo corporativo.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="text-2xl">🚗</span>
+              <div>
+                <h4 class="text-white font-semibold text-sm">Estacionamento & Valet</h4>
+                <p class="text-xs text-gray-400 mt-0.5">Total segurança e comodidade dentro do complexo Brasil 21 Suítes.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="text-2xl">🍷</span>
+              <div>
+                <h4 class="text-white font-semibold text-sm">Adega com +120 Rótulos</h4>
+                <p class="text-xs text-gray-400 mt-0.5">Grandes safras italianas, francesas, portuguesas e sul-americanas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6">
+            <button class="open-reservation-btn btn-gold text-sm py-3.5 px-8">
+              <span>Agendar Minha Visita ao Lucca</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 2: A EXPERIÊNCIA DO RODÍZIO & CORTES NOBRES
+       ========================================================================= -->
+  <section id="experiencia" class="py-24 bg-[#0B0A09] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Cabeçalho da Seção -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-[#D4AF37] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30">A Sequência Perfeita</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+          O Grandioso Rodízio de <span class="font-display text-gold-gradient italic font-normal">Galetos, Steaks & Tilápia</span>
+        </h2>
+        <p class="text-gray-400 text-base sm:text-lg">
+          Servido à vontade à sua mesa, combinando a suculência das carnes na brasa com os clássicos acompanhamentos da colônia italiana.
+        </p>
+      </div>
+
+      <!-- Grid de Etapas da Sequência -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1: Boas-Vindas & Antipasti -->
+        <div class="glass-panel p-8 flex flex-col justify-between relative overflow-hidden group hover:border-[#D4AF37] transition-all duration-300">
+          <div class="absolute -top-12 -right-12 w-36 h-36 bg-[#D4AF37]/10 rounded-full blur-2xl group-hover:bg-[#D4AF37]/20 transition-all"></div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/15 border border-[#D4AF37]/40 flex items-center justify-center text-2xl mb-6 text-[#D4AF37]">
+              🍲
+            </div>
+            <span class="text-xs uppercase font-bold text-[#C5A059] tracking-wider">1ª Etapa</span>
+            <h3 class="font-serif font-bold text-2xl text-white mt-1 mb-3">Boas-Vindas della Nonna</h3>
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              Inicie com a autêntica Sopa de Capeletti artesanal servida fumegante, pães quentinhos com manteiga temperada e polenta frita dourada e sequinha.
+            </p>
+          </div>
+          <ul class="space-y-2 text-xs text-gray-400 border-t border-white/10 pt-4">
+            <li class="flex items-center gap-2"><span class="text-[#D4AF37]">✓</span> Sopa de Capeletti Tradicional</li>
+            <li class="flex items-center gap-2"><span class="text-[#D4AF37]">✓</span> Polenta Frita com Parmesão Curado</li>
+            <li class="flex items-center gap-2"><span class="text-[#D4AF37]">✓</span> Pão de Alho & Manteiga Colonial</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: As Estrelas da Brasa -->
+        <div class="glass-panel p-8 flex flex-col justify-between relative overflow-hidden group border-[#D4AF37]/60 shadow-gold hover:border-[#D4AF37] transition-all duration-300">
+          <div class="absolute -top-12 -right-12 w-36 h-36 bg-[#6B1D2F]/30 rounded-full blur-2xl group-hover:bg-[#D4AF37]/25 transition-all"></div>
+          <div class="absolute top-4 right-4">
+            <span class="bg-[#D4AF37] text-black text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">Carro-Chefe</span>
+          </div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#6B1D2F]/40 border border-[#9B2D46] flex items-center justify-center text-2xl mb-6 text-white">
+              🍗
+            </div>
+            <span class="text-xs uppercase font-bold text-[#D4AF37] tracking-wider">2ª Etapa</span>
+            <h3 class="font-serif font-bold text-2xl text-white mt-1 mb-3">O Fogo & A Brasa</h3>
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              O lendário Galeto al Primo Canto, acompanhado de suculentos cortes nobres de Steaks Angus e Filé de Tilápia com crosta de ervas mediterrâneas.
+            </p>
+          </div>
+          <ul class="space-y-2 text-xs text-gray-400 border-t border-white/10 pt-4">
+            <li class="flex items-center gap-2"><span class="text-[#D4AF37]">✓</span> Galeto al Primo Canto na Brasa</li>
+            <li class="flex items-center gap-2"><span class="text-[#D4AF37]">✓</span> Steaks Nobres Angus Grelhados</li>
+            <li class="flex items-center gap-2"><span class="text-[#D4AF37]">✓</span> Filé de Tilápia com Ervas Frescas</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Massas, Molhos & Acompanhamentos -->
+        <div class="glass-panel p-8 flex flex-col justify-between relative overflow-hidden group hover:border-[#D4AF37] transition-all duration-300">
+          <div class="absolute -top-12 -right-12 w-36 h-36 bg-[#D4AF37]/10 rounded-full blur-2xl group-hover:bg-[#D4AF37]/20 transition-all"></div>
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/15 border border-[#D4AF37]/40 flex items-center justify-center text-2xl mb-6 text-[#D4AF37]">
+              🍝
+            </div>
+            <span class="text-xs uppercase font-bold text-[#C5A059] tracking-wider">3ª Etapa</span>
+            <h3 class="font-serif font-bold text-2xl text-white mt-1 mb-3">Pastas & Tradição</h3>
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              Massas artesanais frescas com molhos pomodoro pelati, ragù clássico e quatro queijos, além da tradicional salada de radicchio com bacon e maionese colonial.
+            </p>
+          </div>
+          <ul class="space-y-2 text-xs text-gray-400 border-t border-white/10 pt-4">
+            <li class="flex items-center gap-2"><span class="text-[#D4AF37]">✓</span> Tortéi de Abóbora & Fettuccine</li>
+            <li class="flex items-center gap-2"><span class="text-[#D4AF37]">✓</span> Radicchio com Bacon Crocante</li>
+            <li class="flex items-center gap-2"><span class="text-[#D4AF37]">✓</span> Maionese Colonial de Batatas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Banner de Chamada para o Rodízio -->
+      <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#1D1A16] via-[#2A181C] to-[#1D1A16] border border-[#D4AF37]/40 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Experiência Completa à Vontade</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">Deseja viver a sequência de galeteria hoje?</h3>
+          <p class="text-sm text-gray-300 mt-1">Almoços de segunda a domingo e jantares especiais com reserva prévia.</p>
+        </div>
+        <button class="open-reservation-btn btn-gold whitespace-nowrap px-8 py-3.5">
+          <span>Garantir Reserva de Mesa</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 3: FESTIVAL DE RISOTTO (DESTAQUE ESPECIAL)
+       ========================================================================= -->
+  <section id="festival-risotto" class="py-24 bg-[#141210] relative overflow-hidden border-t border-b border-white/5">
+
+    <!-- Elementos Decorativos de Fundo -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-[#6B1D2F]/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Texto de Apresentação do Festival -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#6B1D2F]/30 border border-[#9B2D46] text-[#FAF7F0] text-xs font-bold uppercase tracking-wider">
+            <span>✨ Exclusividade Lucca</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+            Festival de <span class="font-display text-gold-gradient italic font-normal">Risotto Autoral</span>
+          </h2>
+
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-light">
+            O casamento perfeito entre a técnica clássica italiana e os ingredientes mais nobres. Nossos risottos utilizam exclusivamente arroz Carnaroli e Arbóreo importados, mantecados com manteiga noisette, queijos maturados e finalizações aromáticas inesquecíveis.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3 text-sm text-gray-200">
+              <span class="w-6 h-6 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center text-xs font-bold">1</span>
+              <span><strong>Funghi Porcini & Trufas:</strong> Aromático, terroso e com azeite trufado.</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-200">
+              <span class="w-6 h-6 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center text-xs font-bold">2</span>
+              <span><strong>Parmigiano & Tornedor de Mignon:</strong> Redução encorpada de vinho do Porto.</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-200">
+              <span class="w-6 h-6 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center text-xs font-bold">3</span>
+              <span><strong>Camarão Rosa & Limão Siciliano:</strong> Frescor cítrico e azeite extravirgem.</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-200">
+              <span class="w-6 h-6 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center text-xs font-bold">4</span>
+              <span><strong>Gorgonzola Doce, Pêra & Nozes:</strong> Contraste sublime entre o salgado e o doce.</span>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-col sm:flex-row gap-4">
+            <button onclick="openReservationWithDish('Festival de Risotto')" class="btn-gold text-sm py-3.5 px-8">
+              <span>Reservar para o Festival de Risotto</span>
+            </button>
+            <a href="#cardapio" class="btn-outline-gold text-sm py-3.5 px-6 text-center">
+              <span>Ver Fotos & Preços</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual / Fotos dos Risottos -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+          <div class="rounded-2xl overflow-hidden border border-[#D4AF37]/30 shadow-xl group relative h-72">
+            <img
+              src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=85"
+              alt="Risotto de Funghi Porcini e Trufas Negras"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5">
+              <span class="text-xs text-[#D4AF37] font-semibold uppercase">Funghi & Trufas</span>
+              <h4 class="font-serif font-bold text-lg text-white">Risotto de Funghi Porcini</h4>
+              <p class="text-xs text-gray-300 mt-1">Com queijo Grana Padano e azeite de trufas brancas.</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden border border-[#D4AF37]/30 shadow-xl group relative h-72 sm:translate-y-6">
+            <img
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=85"
+              alt="Risotto Parmigiano com Tornedor de Mignon"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5">
+              <span class="text-xs text-[#D4AF37] font-semibold uppercase">Chef Signature</span>
+              <h4 class="font-serif font-bold text-lg text-white">Parmigiano & Mignon</h4>
+              <p class="text-xs text-gray-300 mt-1">Com redução de vinho do Porto e manteiga de ervas.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 4: CARDÁPIO INTERATIVO & DETALHES DOS PRATOS
+       ========================================================================= -->
+  <section id="cardapio" class="py-24 bg-[#0B0A09] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <span class="text-[#D4AF37] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30">Alta Gastronomia</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+          Nosso <span class="font-display text-gold-gradient italic font-normal">Cardápio & Experiências</span>
+        </h2>
+        <p class="text-gray-400 text-base sm:text-lg">
+          Navegue pelas nossas opções autorais, veja ingredientes, fotos ampliadas e harmonizações sugeridas pelo sommelier.
+        </p>
+      </div>
+
+      <!-- Barra de Abas de Categorias do Cardápio -->
+      <div class="flex items-center justify-start sm:justify-center gap-3 overflow-x-auto pb-6 mb-12 no-scrollbar" id="menu-tabs-container">
+        <!-- Renderizado dinamicamente pelo JavaScript (js/main.js) -->
+      </div>
+
+      <!-- Grid de Pratos do Cardápio -->
+      <div id="menu-items-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Renderizado dinamicamente pelo JavaScript (js/main.js) -->
+      </div>
+
+      <!-- Rodapé do Cardápio -->
+      <div class="mt-16 text-center">
+        <div class="inline-flex flex-col sm:flex-row items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/10 max-w-2xl mx-auto">
+          <span class="text-2xl">🍷</span>
+          <p class="text-xs sm:text-sm text-gray-300 text-left">
+            Possui restrições alimentares ou deseja um menu personalizado para eventos corporativos? Fale diretamente com nosso maître.
+          </p>
+          <button class="open-reservation-btn btn-gold text-xs py-2.5 px-5 whitespace-nowrap">
+            <span>Falar com o Maître</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 5: PROVA SOCIAL - NOTA 4.8 / 5.0 ESTRELAS & AVALIAÇÕES
+       ========================================================================= -->
+  <section id="avaliacoes" class="py-24 bg-[#141210] relative overflow-hidden border-t border-b border-white/5 social-proof-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Bloco de Métricas de Avaliação -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold uppercase tracking-wider">
+            <span>Reconhecimento & Confiança</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+            Amado por quem aprecia a <span class="font-display text-gold-gradient italic font-normal">Verdadeira Gastronomia</span>.
+          </h2>
+
+          <div class="p-6 rounded-2xl bg-black/60 border border-[#D4AF37]/40 shadow-gold">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="font-serif text-5xl font-bold text-white">4.8</div>
+              <div>
+                <div class="text-yellow-400 text-xl tracking-wider">★★★★★</div>
+                <p class="text-xs text-[#C5A059] font-medium mt-0.5">Classificação Excelente</p>
+              </div>
+            </div>
+            <p class="text-xs text-gray-400">
+              Com base em mais de <strong class="text-white">1.280 avaliações verificadas</strong> no Google Meu Negócio, TripAdvisor e portais gastronômicos de Brasília.
+            </p>
+          </div>
+
+          <div class="space-y-3 text-sm text-gray-300">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Atendimento impecável com maîtres e garçons atenciosos</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Ambiente climatizado e seguro no Complexo Brasil 21</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Galeto crocante e risottos servidos no ponto perfeito</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carrossel Interativo de Depoimentos Reais -->
+        <div class="lg:col-span-7">
+          <div id="reviews-container">
+            <!-- Renderizado dinamicamente pelo JavaScript (js/main.js) -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 6: GALERIA INSTAGRAM & PRESENÇA SOCIAL
+       ========================================================================= -->
+  <section id="galeria" class="py-24 bg-[#0B0A09] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-[#D4AF37] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30">Presença Online Real</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-3">
+            Siga nossa jornada no <span class="font-display text-gold-gradient italic font-normal">Instagram</span>
+          </h2>
+          <p class="text-gray-400 text-sm sm:text-base mt-2">
+            Fotos reais do ambiente, dos nossos pratos e dos momentos inesquecíveis no Complexo Brasil 21.
+          </p>
+        </div>
+
+        <!-- Filtros Rápidos da Galeria -->
+        <div class="flex flex-wrap gap-2">
+          <button class="insta-filter-btn active px-4 py-2 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/10 hover:border-[#D4AF37]" data-filter="all">Todos</button>
+          <button class="insta-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 text-gray-300 border border-white/10 hover:border-[#D4AF37]" data-filter="pratos">Pratos & Risotto</button>
+          <button class="insta-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 text-gray-300 border border-white/10 hover:border-[#D4AF37]" data-filter="ambiente">Ambiente Romântico</button>
+          <button class="insta-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white/5 text-gray-300 border border-white/10 hover:border-[#D4AF37]" data-filter="vinhos">Adega & Vinhos</button>
+        </div>
+      </div>
+
+      <!-- Container da Galeria do Instagram -->
+      <div id="instagram-gallery-container" class="insta-grid">
+        <!-- Renderizado dinamicamente pelo JavaScript (js/instagram-feed.js) -->
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="https://www.instagram.com/complexobrasil21/" target="_blank" rel="noopener noreferrer" class="btn-outline-gold inline-flex items-center gap-2 text-sm py-3.5 px-8">
+          <svg class="w-5 h-5 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>Acessar @complexobrasil21 no Instagram</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 7: DÚVIDAS FREQUENTES (FAQ ACCORDION)
+       ========================================================================= -->
+  <section class="py-20 bg-[#141210] border-t border-b border-white/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-12 space-y-3">
+        <span class="text-[#D4AF37] text-xs font-bold uppercase tracking-widest">Informações Úteis</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Dúvidas Frequentes sobre o Lucca</h2>
+      </div>
+
+      <div class="space-y-4">
+
+        <div class="accordion-item glass-panel px-6 rounded-2xl">
+          <button class="accordion-header">
+            <span>Como funciona o rodízio de galetos e cortes nobres?</span>
+            <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="accordion-content">
+            Nosso rodízio é servido em sequência contínua à mesa. Começamos com a Sopa de Capeletti e polentas crocantes, seguida do Galeto al Primo Canto, Steaks na brasa e Filé de Tilápia, acompanhados de massas frescas artesanais e saladas. Você pode repetir qualquer item à vontade!
+          </div>
+        </div>
+
+        <div class="accordion-item glass-panel px-6 rounded-2xl">
+          <button class="accordion-header">
+            <span>É necessário fazer reserva com antecedência?</span>
+            <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="accordion-content">
+            Para garantir uma mesa específica (como mesas reservadas à luz de velas para casais ou mesas amplas para reuniões corporativas e famílias), recomendamos fortemente a reserva prévia via nosso WhatsApp oficial (61) 3218-4746. No entanto, também recebemos clientes sem reserva de acordo com a disponibilidade do salão.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-panel px-6 rounded-2xl">
+          <button class="accordion-header">
+            <span>O restaurante possui estacionamento no Complexo Brasil 21?</span>
+            <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="accordion-content">
+            Sim! Estamos situados no Complexo Brasil 21 Suítes (SHS Quadra 6, Bloco F), que oferece estacionamento rotativo coberto e serviço de manobrista (Valet Parking) com total segurança e comodidade 24 horas por dia.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-panel px-6 rounded-2xl">
+          <button class="accordion-header">
+            <span>Vocês oferecem opções vegetarianas e para celíacos?</span>
+            <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="accordion-content">
+            Sim. No nosso Festival de Risotto possuímos opções vegetarianas consagradas (como o Risotto de Funghi Porcini com Trufas e o Risotto de Gorgonzola Doce com Pêras). Além disso, nosso galeto na brasa e tilápia são naturalmente sem glúten. Informe ao maître suas preferências para um atendimento personalizado.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 8: LOCALIZAÇÃO, MAPA & CONTATO / FOOTER
+       ========================================================================= -->
+  <footer id="contato" class="bg-[#0B0A09] pt-20 pb-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Card Principal de Localização e Horários -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+
+        <!-- Detalhes de Endereço e Contato -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full border border-[#D4AF37] flex items-center justify-center bg-[#161311] shadow-gold">
+              <span class="font-display text-2xl text-[#D4AF37] font-bold">L</span>
+            </div>
+            <div>
+              <h3 class="font-display text-2xl tracking-widest text-white">LUCCA RESTAURANTE</h3>
+              <p class="text-xs tracking-widest text-[#C5A059] uppercase font-semibold">Galeteria Italiana & Festival de Risotto</p>
+            </div>
+          </div>
+
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+            Uma experiência sensorial inesquecível no centro de Brasília. Venha desfrutar de um almoço executivo de alto padrão ou de um jantar romântico à luz de velas.
+          </p>
+
+          <div class="space-y-4 text-sm text-gray-300">
+
+            <div class="flex items-start gap-3">
+              <span class="text-[#D4AF37] text-lg">📍</span>
+              <div>
+                <strong class="text-white">Endereço Oficial:</strong>
+                <p class="text-gray-400">SHS Quadra 6, Bloco F, 1º andar - Complexo Brasil 21 Suítes, Plano Piloto, Brasília - DF, CEP 70316-000</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-[#D4AF37] text-lg">📞</span>
+              <div>
+                <strong class="text-white">Telefone & WhatsApp de Reservas:</strong>
+                <p class="text-gray-400">
+                  <a href="tel:6132184746" class="hover:text-[#D4AF37] transition-colors">(61) 3218-4746</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-[#D4AF37] text-lg">⏰</span>
+              <div>
+                <strong class="text-white">Horários de Funcionamento:</strong>
+                <ul class="text-xs text-gray-400 space-y-1 mt-1">
+                  <li>• <strong>Almoço (Seg a Sex):</strong> 12:00 às 15:00 (Almoço Executivo & Rodízio)</li>
+                  <li>• <strong>Almoço (Sáb e Dom):</strong> 12:00 às 16:00 (Almoço Especial em Família)</li>
+                  <li>• <strong>Jantar (Seg a Sáb):</strong> 19:00 às 23:30 (Festival de Risotto & Jantar Romântico)</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Botões de Traçar Rota -->
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="https://maps.google.com/?q=Complexo+Brasil+21+Brasilia+DF" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-semibold text-white border border-white/10 flex items-center gap-2 transition-colors">
+              <span>Abrir no Google Maps</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+            <a href="https://waze.com/ul?q=Complexo%20Brasil%2021%20Brasilia" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-semibold text-white border border-white/10 flex items-center gap-2 transition-colors">
+              <span>Abrir no Waze</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Mapa Interativo Embutido (Google Maps Embed) -->
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden border border-[#D4AF37]/30 shadow-2xl relative min-h-[360px] bg-[#141210]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.0664687508933!2d-47.8955!3d-15.7950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ae461f36471%3A0x6a0c4f826649f82d!2sComplexo%20Brasil%2021!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="100%"
+            style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%); min-height: 360px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização do Lucca Restaurante no Complexo Brasil 21 Brasília"
+          ></iframe>
+          <div class="absolute top-4 left-4 p-3 rounded-xl bg-black/85 backdrop-blur-md border border-[#D4AF37]/40 text-xs text-white">
+            <span class="font-bold text-[#D4AF37] block">Lucca Restaurante</span>
+            <span>SHS Quadra 6, Bloco F, 1º andar</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Créditos Institucionais -->
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <p>© 2026 Lucca Restaurante & Galeteria. Todos os direitos reservados. SHS Qd 6, Bloco F, Brasil 21 Suítes, Brasília - DF.</p>
+        <div class="flex items-center gap-4">
+          <a href="#sobre" class="hover:text-gray-400 transition-colors">Sobre Nós</a>
+          <a href="#cardapio" class="hover:text-gray-400 transition-colors">Cardápio</a>
+          <a href="#contato" class="hover:text-gray-400 transition-colors">Contato</a>
+          <a href="https://www.instagram.com/complexobrasil21/" target="_blank" rel="noopener noreferrer" class="text-[#D4AF37] hover:underline">Instagram Oficial</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL INTELIGENTE DE RESERVAS (WHATSAPP AUTOMATION)
+       ========================================================================= -->
+  <div id="reservation-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 hidden">
+    <div class="relative max-w-lg w-full bg-[#161311] border border-[#D4AF37]/40 rounded-2xl overflow-hidden shadow-2xl p-6 sm:p-8 transform scale-95 transition-transform duration-300">
+
+      <!-- Botão Fechar -->
+      <button id="close-reservation-modal" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition-colors" aria-label="Fechar">
+        ✕
+      </button>
+
+      <div class="mb-6">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#D4AF37]/15 text-[#D4AF37] text-[11px] font-bold uppercase tracking-wider mb-2">
+          <span>Reserva Imediata via WhatsApp</span>
+        </div>
+        <h3 class="font-serif font-bold text-2xl text-white">Solicitar Mesa no Lucca</h3>
+        <p class="text-xs text-gray-400 mt-1">Preencha os dados e nosso assistente gerará a mensagem formatada para o WhatsApp (61) 3218-4746.</p>
+      </div>
+
+      <form id="reservation-form" class="space-y-4">
+
+        <div>
+          <label for="res-name" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Seu Nome Completo *</label>
+          <input type="text" id="res-name" class="form-input" placeholder="Ex: Roberto Silva" required>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="res-phone" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">WhatsApp / Telefone</label>
+            <input type="tel" id="res-phone" class="form-input" placeholder="(61) 99999-9999">
+          </div>
+          <div>
+            <label for="res-guests" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Nº de Pessoas *</label>
+            <select id="res-guests" class="form-select" required>
+              <option value="2 pessoas (Mesa para Casal)">2 pessoas (Mesa Casal / Romântica)</option>
+              <option value="1 pessoa (Individual / Executivo)">1 pessoa (Individual / Executivo)</option>
+              <option value="3 a 4 pessoas (Família / Grupo Pequeno)">3 a 4 pessoas (Família / Amigos)</option>
+              <option value="5 a 8 pessoas (Grupo Médio)">5 a 8 pessoas (Grupo Médio)</option>
+              <option value="Mais de 8 pessoas (Evento / Comemoração)">Mais de 8 pessoas (Evento / Reunião)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="res-date" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Data Desejada *</label>
+            <input type="date" id="res-date" class="form-input" required>
+          </div>
+          <div>
+            <label for="res-time" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Horário Previsto *</label>
+            <select id="res-time" class="form-select" required>
+              <optgroup label="Almoço">
+                <option value="12:00">12:00</option>
+                <option value="12:30">12:30</option>
+                <option value="13:00" selected>13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+              </optgroup>
+              <optgroup label="Jantar & Festival de Risotto">
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="res-occasion" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Ocasião Especial</label>
+          <select id="res-occasion" class="form-select">
+            <option value="Jantar Romântico / Casal">Jantar Romântico / Aniversário de Casamento</option>
+            <option value="Almoço Executivo / Negócios">Almoço Executivo / Negócios no Brasil 21</option>
+            <option value="Festival de Risotto">Festival de Risotto</option>
+            <option value="Rodízio Tradicional de Galeto">Rodízio Tradicional de Galeto em Família</option>
+            <option value="Comemoração / Aniversário">Comemoração de Aniversário</option>
+            <option value="Outro Motivo">Outro Motivo</option>
+          </select>
+        </div>
+
+        <input type="hidden" id="res-dish-highlight" value="">
+
+        <div>
+          <label for="res-notes" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Observações ou Preferência de Mesa</label>
+          <input type="text" id="res-notes" class="form-input" placeholder="Ex: Mesa à luz de velas, cadeira para criança, etc.">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="btn-gold w-full py-4 text-sm font-bold flex items-center justify-center gap-2">
+            <span>Enviar Pedido de Reserva para WhatsApp</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+          </button>
+          <p class="text-[11px] text-gray-500 text-center mt-2">Você será redirecionado para o WhatsApp oficial (61) 3218-4746 com os dados preenchidos.</p>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FLOATING WHATSAPP LAUNCHER COM PULSO E TOOLTIP
+       ========================================================================= -->
+  <a href="https://wa.me/556132184746?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20e%20fazer%20uma%20reserva%20no%20Lucca%20Restaurante%20(Brasil%2021)!" target="_blank" rel="noopener noreferrer" class="whatsapp-float-launcher" aria-label="Fale conosco no WhatsApp">
+    <span class="whatsapp-tooltip">Reservas no WhatsApp: (61) 3218-4746</span>
+    <div class="whatsapp-btn-circle">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zM12.05 19.14c-1.52 0-3-.4-4.3-1.16l-.31-.18-3.21.84.86-3.13-.2-.32c-.84-1.35-1.28-2.92-1.28-4.52 0-4.66 3.79-8.45 8.45-8.45 2.26 0 4.38.88 5.98 2.48 1.6 1.6 2.48 3.72 2.48 5.98 0 4.67-3.79 8.46-8.47 8.46zm4.64-6.33c-.25-.13-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.13-.17.25-.66.82-.81.99-.15.17-.3.19-.55.07-.25-.13-1.07-.39-2.04-1.26-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.44-.06-.13-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.32-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1 1.55-.23 1.94-1.34 2.15-1.85.21-.51.21-.95.15-1.04-.06-.1-.23-.16-.48-.28z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Scripts da Aplicação -->
+  <script src="js/menu-data.js"></script>
+  <script src="js/instagram-feed.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Script para definir a data mínima do formulário de reserva como hoje -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dateInput = document.getElementById('res-date');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+        dateInput.value = today;
+      }
+    });
+  </script>
+</body>
+</html>
